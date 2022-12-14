@@ -6,10 +6,7 @@ import com.example.ajsneakrsApp.ajsneakrs.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,5 +27,10 @@ public class ProductController {
     @GetMapping("/{id}")
     ResponseEntity <Optional<Product>> getProductById(@PathVariable Long id){
         return new ResponseEntity<>(repo.findById(id), HttpStatus.OK);
+    }
+
+    @PostMapping
+    ResponseEntity<Product> addNewProduct(@RequestBody Product product){
+        return new ResponseEntity<>(repo.save(product), HttpStatus.CREATED);
     }
 }
