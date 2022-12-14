@@ -28,7 +28,16 @@ public class DataLoader {
         Manufacturer manufacturer1 = new Manufacturer();
         manufacturer1.setProducts(new ArrayList<>());
         manufacturer1.setName("Nike");
+        manufacturer1.setStatus(true);
         manufacturerRepository.save(manufacturer1);
+
+        Manufacturer manufacturer2 = new Manufacturer();
+        manufacturer2.setProducts(new ArrayList<>());
+        manufacturer2.setName("Adidas");
+        manufacturer2.setStatus(true);
+        manufacturerRepository.save(manufacturer2);
+
+
 
         Product product1 = new Product();
         product1.setName("Air Jordan 1");
@@ -39,5 +48,15 @@ public class DataLoader {
         product1.setBuyPrice(150);
         product1.setSellPrice(190);
         productRepository.save(product1);
+
+        Product product2 = new Product();
+        product2.setName("Adidas Forum");
+        product2.setDescription("Bad Bunny White");
+        product2.setSize(7.5);
+        product2.setManufacturer(manufacturer2);
+        product2.setStockQty(2);
+        product2.setBuyPrice(140);
+        product2.setSellPrice(170);
+        productRepository.save(product2);
     }
 }
