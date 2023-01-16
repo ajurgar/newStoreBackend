@@ -10,4 +10,5 @@ public class AjsneakrsApplication {
 		SpringApplication.run(AjsneakrsApplication.class, args);
 	}
 
+	
 }

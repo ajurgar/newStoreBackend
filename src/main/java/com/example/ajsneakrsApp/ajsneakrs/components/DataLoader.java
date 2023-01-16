@@ -58,5 +58,55 @@ public class DataLoader {
         product2.setBuyPrice(140);
         product2.setSellPrice(170);
         productRepository.save(product2);
+
+        Product product3 = new Product();
+        product3.setName("Adidas Forum");
+        product3.setDescription("Bad Bunny Black");
+        product3.setSize(7);
+        product3.setManufacturer(manufacturer2);
+        product3.setStockQty(4);
+        product3.setBuyPrice(140);
+        product3.setSellPrice(190);
+        productRepository.save(product3);
+
+        Product product4 = new Product();
+        product4.setName("Air Jordan 2");
+        product4.setDescription("Union LA Blue");
+        product4.setSize(8);
+        product4.setManufacturer(manufacturer1);
+        product4.setStockQty(2);
+        product4.setBuyPrice(140);
+        product4.setSellPrice(190);
+        productRepository.save(product4);
+
+        Product product5 = new Product();
+        product5.setName("Air Jordan 3");
+        product5.setDescription("Reimagined White Cement");
+        product5.setSize(6);
+        product5.setManufacturer(manufacturer1);
+        product5.setStockQty(5);
+        product5.setBuyPrice(120);
+        product5.setSellPrice(200);
+        productRepository.save(product5);
+
+        Product product6 = new Product();
+        product6.setName("Air Jordan 4");
+        product6.setDescription("Oreo");
+        product6.setSize(9);
+        product6.setManufacturer(manufacturer1);
+        product6.setStockQty(3);
+        product6.setBuyPrice(170);
+        product6.setSellPrice(300);
+        productRepository.save(product6);
+
+        Product product7 = new Product();
+        product7.setName("Adidas Yeezy");
+        product7.setDescription("350 V2 Zebra");
+        product7.setSize(7.5);
+        product7.setManufacturer(manufacturer2);
+        product7.setStockQty(4);
+        product7.setBuyPrice(200);
+        product7.setSellPrice(260);
+        productRepository.save(product7);
     }
 }

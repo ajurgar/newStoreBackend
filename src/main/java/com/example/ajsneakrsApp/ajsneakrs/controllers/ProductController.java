@@ -21,6 +21,7 @@ public class ProductController {
 
     @GetMapping
     List<Product> getAllProducts() {
+        System.out.println("API received");
         return repo.findAll();
     }
 
@@ -32,5 +33,10 @@ public class ProductController {
     @PostMapping
     ResponseEntity<Product> addNewProduct(@RequestBody Product product){
         return new ResponseEntity<>(repo.save(product), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/{id}/productcount")
+    ResponseEntity<Integer> countByManufacturerId(@PathVariable Long id){
+        return new ResponseEntity<>(repo.countByManufacturerId(id), HttpStatus.OK);
     }
 }
